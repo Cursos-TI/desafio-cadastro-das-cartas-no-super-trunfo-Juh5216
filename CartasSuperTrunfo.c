@@ -15,17 +15,18 @@ int main() {
     
 
     //Carta 1
-    char estado1;           // Uma letra.
-    char codigo1[5];        // A letra do estado seguida de um número 01 á 04.
+    char estado1;                                                                                    // Uma letra.
+    char codigo1[5];                                                                                 // A letra do estado seguida de um número 01 á 04.
     char nomeCidade1[15]; 
     int populacao1;
-    float area1;            // Área em kilometros quadrados
+    float area1;                                                                                     // Área em kilometros quadrados
     float PIB1; 
     int pontosTuristicos1;
-    float PIBPerCapita1;    // Pib / população
-    float densidade1;       // População/área
-
-
+    float PIBPerCapita1;                                                                             // Pib / população
+    float densidadePopulacional1;                                                                    // População/área
+    float SuperPoder1 = (float) (populacao1 + area1 + PIB1 + PIBPerCapita1 + pontosTuristicos1);     /* - Soma de : população, área, PiB, PiB per capita e densidade populacional invertida, numeros de pontos turíticos).
+                                                                                                        - Conversão de tipos: O resultado da soma > tipo (float)  */
+                                                                                                        
     //Receber informações da carta 1
     printf("Informações da primeira carta! \n");
 
@@ -54,21 +55,23 @@ int main() {
     //Cálculo do PIB per capita carta 1
     PIBPerCapita1 = (PIB1/populacao1);
 
-    //Cálculo da densidade carta 1
+    //Cálculo da densidade populacinal carta 1
 
-    densidade1 = (populacao1/area1);
+    densidadePopulacional1 = (populacao1/area1);
 
     
     //Carta 2
-    char estado2;           // Uma letra.
-    char codigo2[5];        // A letra do estado seguida de um número 01 á 04.
+    char estado2;                                                                                       // Uma letra.
+    char codigo2[5];                                                                                    // A letra do estado seguida de um número 01 á 04.
     char nomeCidade2[15]; 
     int populacao2;
-    float area2;            // Área em kilometros quadrados
+    float area2;                                                                                        // Área em kilometros quadrados
     float PIB2; 
     int pontosTuristicos2;
-    float PIBPerCapita2;    // Pib / população
-    float densidade2;       // População/área
+    float PIBPerCapita2;                                                                                // Pib / população
+    float densidadePopulacional2;                                                                       // População/área
+    float SuperPoder2 = (float) (populacao2 + area2 + PIB2 + PIBPerCapita2 + pontosTuristicos2);        /* Soma de : população, área, PiB, PiB per capita e densidade populacional invertida, numeros de pontos turíticos).
+                                                                                                        Conversão de tipos: O resultado da soma > tipo (float)  */
 
     //Receber informações da carta 2
     printf("Informações da segunda carta! \n");
@@ -97,9 +100,9 @@ int main() {
     //Cálculo do PIB per capita carta 2
     PIBPerCapita2 = (PIB2/populacao2);
 
-    //Cálculo da densidade carta 2
+    //Cálculo da densidade populacional carta 2
 
-    densidade2 = (populacao2/area2);
+    densidadePopulacional2 = (populacao2/area2);
 
     
     // Exibição dos Dados das Cartas:
@@ -116,12 +119,11 @@ int main() {
     printf("Área: %f Km² \n ", area1);
     printf("PIB: %f reais \n ", PIB1);
     printf("Números de pontos turísticos: %d \n", pontosTuristicos1);
-    printf("Densidade populacional: %f hab/Km² \n ", densidade1);
+    printf("Densidade populacional: %f hab/Km² \n ", densidadePopulacional1);
     printf("PIB per capita: %f reais \n ", PIBPerCapita1);
     
 
 
-    
     //Exibição dos dados da carta 2
     printf("Carta 2 \n");
 
@@ -132,10 +134,12 @@ int main() {
     printf("Área: %f Km² \n ", area2);
     printf("PIB: %f reais \n ", PIB2);
     printf("Números de pontos turísticos: %d \n", pontosTuristicos2);
-    printf("Densidade populacional: %f hab/Km²\n", densidade2);
+    printf("Densidade populacional: %f hab/Km²\n", densidadePopulacional2);
     printf("PIB per capita: %f reais \n", PIBPerCapita2);
     
-
+    
+    //Comparação:Comparar 2 propriedades (carta1 > carta2)/ Resultado 1 carta 1ganha e 0 carta2 ganha/ impressão do resultado.
+    // densidade populacional: ganha a que for menor.
 
     return 0;
 }
