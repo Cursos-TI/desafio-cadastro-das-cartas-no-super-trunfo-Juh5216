@@ -63,17 +63,17 @@ int main() {
 
     
     //Carta 2
-    char estado2;                                                                                       // Uma letra.
-    char codigo2[5];                                                                                    // A letra do estado seguida de um número 01 á 04.
+    char estado2;                        // Uma letra.
+    char codigo2[5];                     // A letra do estado seguida de um número 01 á 04.
     char nomeCidade2[15]; 
     int populacao2;
-    float area2;                                                                                        // Área em kilometros quadrados
+    float area2;                         // Área em kilometros quadrados
     float PIB2; 
     int pontosTuristicos2;
-    float PIBPerCapita2;                                                                                // Pib / população
-    float densidadePopulacional2;                                                                       // População/área
-    float SuperPoder2;        /* Soma de : população, área, PiB, PiB per capita e densidade populacional invertida, numeros de pontos turíticos).
-                                                                                                        Conversão de tipos: O resultado da soma > tipo (float)  */
+    float PIBPerCapita2;                 // Pib / população
+    float densidadePopulacional2;        // População/área
+    float SuperPoder2;                   /* - Soma de : população, área, PiB, PiB per capita e densidade populacional invertida, numeros de pontos turíticos).
+                                            - Conversão de tipos: O resultado da soma > tipo (float)  */
 
     //Receber informações da carta 2
     printf("Informações da segunda carta! \n");
@@ -144,21 +144,22 @@ int main() {
     
 
     /*Comparação das cartas: 
-        - Comparar todas as propriedades
-        - Todas as propriedades, com excesão da densidade populacional, ganha a que tiver o maior valor. */
+        - Comparar todos os atributos.
+        - O atributo que tiver o maior valor ganha. Com excesão da densidade populacional. */
     
     printf("Comparação de cartas: \n");
         printf("Resultado 1 = Carta 1 venceu");
         printf("Resultado 0 = Carta2 venceu");
 
-    int resultadoPopulacao = (populacao1 > populacao2);
-    int resultadoArea = (area1 > area2);
-    int resultadoPIB = (PIB1 > PIB2);
-    int resultadoTurismo = (pontosTuristicos1 > pontosTuristicos2);
-    int resultadoDensidade = (densidadePopulacional1 < densidadePopulacional2); 
-    int resultadoPIBpc = (PIBPerCapita1 > PIBPerCapita2);
-    int resultadoSuper = (SuperPoder1 > SuperPoder2);
+    int resultadoPopulacao = (populacao1 > populacao2);                         // População
+    int resultadoArea = (area1 > area2);                                        // Área
+    int resultadoPIB = (PIB1 > PIB2);                                           // PIB
+    int resultadoTurismo = (pontosTuristicos1 > pontosTuristicos2);             // Pontos turísticos
+    int resultadoDensidade = (densidadePopulacional1 < densidadePopulacional2); // Densidade populacional
+    int resultadoPIBpc = (PIBPerCapita1 > PIBPerCapita2);                       // PIB per capita
+    int resultadoSuper = (SuperPoder1 > SuperPoder2);                           // Super poder
 
+    //Exibição dos atributos vencedores
     printf("População: Carta %d venceu (%d)\n", resultadoPopulacao ? 1 : 2, resultadoPopulacao);
     printf("Área: Carta %d venceu (%d)\n", resultadoArea ? 1 : 2, resultadoArea);
     printf("PIB: Carta %d venceu (%d)\n", resultadoPIB ? 1 : 2, resultadoPIB);
