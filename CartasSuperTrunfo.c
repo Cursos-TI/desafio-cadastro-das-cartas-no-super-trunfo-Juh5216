@@ -15,17 +15,17 @@ int main() {
     
 
     //Carta 1
-    char estado1;                                                                                    // Uma letra.
-    char codigo1[5];                                                                                 // A letra do estado seguida de um número 01 á 04.
+    char estado1;                           // Uma letra.
+    char codigo1[5];                        // A letra do estado seguida de um número 01 á 04.
     char nomeCidade1[15]; 
     int populacao1;
-    float area1;                                                                                     // Área em kilometros quadrados
+    float area1;                           // Área em kilometros quadrados
     float PIB1; 
     int pontosTuristicos1;
-    float PIBPerCapita1;                                                                             // Pib / população
-    float densidadePopulacional1;                                                                    // População/área
-    float SuperPoder1;                                                                             /* - Soma de : população, área, PiB, PiB per capita e densidade populacional invertida, numeros de pontos turíticos).
-                                                                                                        - Conversão de tipos: O resultado da soma > tipo (float)  */
+    float PIBPerCapita1;                   // Pib / população
+    float densidadePopulacional1;          // População/área
+    float SuperPoder1;                     /* - Soma de : população, área, PiB, PiB per capita e densidade populacional invertida, numeros de pontos turíticos).
+                                              - Conversão de tipos: O resultado da soma > tipo (float)  */
                                                                                                         
     //Receber informações da carta 1
     printf("Informações da primeira carta! \n");
@@ -159,7 +159,7 @@ int main() {
     printf("Pontos turísticos: %d \n ",(pontosTuristicos1 > pontosTuristicos2));    // Pontos turísticos
     printf("Densidade: %d \n ", (densidadePopulacional1 < densidadePopulacional2)); // Densidade populacional
     printf("PIB per capita: %d \n ",(PIBPerCapita1 > PIBPerCapita2));               // PIB per capita
-    printf("Super poder: %d ", (SuperPoder1 > SuperPoder2));                     // Super poder
+    printf("Super poder: %d ", (SuperPoder1 > SuperPoder2));                        // Super poder
 
     return 0;
 }
