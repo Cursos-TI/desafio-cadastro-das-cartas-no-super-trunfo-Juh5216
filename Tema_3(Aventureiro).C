@@ -5,7 +5,7 @@ int main() {
     
     /* Objetivo: Comparação entre duas cartas já cadastradas, utilizando estruturas de decisão if e if/else.
         - O Jogador deve escolher um atributo para batalhar.
-        - Criar um menu para que o jogador possa escolher o atributo que irá batalhar (Switch).
+            * Criar um menu para que o jogador possa escolher o atributo que irá batalhar (Switch).
         - Com o atributo selecionado, é necessário comparar as cartas para descobrir o vencedor (If/else).
             * Tratar excessões = Empate (Estruturas aninhadas)
         - Exibir o resultado
@@ -114,6 +114,7 @@ int main() {
     printf("Insira o número de pontos turísticos da cidade: ");
     scanf(" %d", &pontosTuristicos2);
 
+
      // 2º Cálculo e exibição da densidade populacional e PIB per capita.
 
     //Cálculo do PIB per capita carta 2.
@@ -138,6 +139,7 @@ int main() {
     printf("Números de pontos turísticos: %d \n", pontosTuristicos1);
     printf("Densidade populacional: %f hab/Km² \n ", densidadePopulacional1);
     printf("PIB per capita: %f reais \n ", PIBPerCapita1);
+    printf("Super poder: %f \n", SuperPoder1);
     
 
 
@@ -153,18 +155,60 @@ int main() {
     printf("Números de pontos turísticos: %d \n", pontosTuristicos2);
     printf("Densidade populacional: %f hab/Km²\n", densidadePopulacional2);
     printf("PIB per capita: %f reais \n", PIBPerCapita2);
+    printf("Super poder: %f \n", SuperPoder2);
 
 
-    /* 3º - Comparação de APENAS 1 atributo númerico. 
-            * Essa escolha deve ser feita diretamente pelo código, não pela entrada do usuário.
-            * Para determinar a carta vencedora, se aplica o mesmo conceito do primeiro nível do desafio, o maior valor vence .
-        - Exibir o resultado de comparação. 
-            * Qual carta venceu a comparação, incluindo:
-            * O atributo utilizado na comparação.
-            * Os valores das duas cartas para aquele atributo). */
+    //Escolha de atributo (carta 1) para a batalha das cartas.
+    int escolhaAtributo;
 
-    // Super poder
-    if (SuperPoder1>SuperPoder2) {
+    printf("Jogadores 1 e 2, escolham 1 atributo para batalhar!");
+    printf("1 - População \n");
+    printf("2 - Área \n");
+    printf("3 - PIB \n");
+    printf("4 - Pontos turísticos \n");
+    printf("5 - Densidade populacional \n");
+    printf("6 - PIB per capita \n");
+    printf("7 - Super poder \n");
+    scanf("%d", &escolhaAtributo);
+
+    switch(escolhaAtributo){
+        case 1:
+        printf("Atributo escolhido para a batalha: População! \n");
+        break;
+        case 2:
+        printf("Atributo escolhido para a batalha: Área! \n");
+        break;
+        case 3:
+        printf("Atributo escolhido para a batalha: PIB! \n");
+        break;
+        case 4:
+        printf("Atributo escolhido para a batalha: Pontos turísticos! \n");
+        break;
+        case 5:
+        printf("JAtributo escolhido para a batalha: Densidade populacional! \n");
+        break;
+        case 6:
+        printf("Atributo escolhido para a batalha: PIB per capita! \n");
+        break;
+        case 7:
+        printf("Atributo escolhido para a batalha: Super poder! \n");
+        break;
+        default:
+        printf("Opção inválida! Escolham um número de 1 à 7 corresponde ao atributo que desejam para batalha! \n");
+        break;
+    }
+
+
+
+    /* Comparação das cartas para descobrir o vencedor.
+            * O nome dos dois países.
+            * O atributo usado na comparação.
+            * Os valores do atributo para cada carta.
+            * Qual carta venceu.
+            * Em caso de empate, exibir a mensagem "Empate!".
+            * Tratar excessões = Empate (Estruturas aninhadas) */
+
+    if (e>SuperPoder2) {
         printf("Carta vencedora da rodada \n");
         printf("Carta 1 - %c: %f \n", estado1, SuperPoder1);
         printf("Carta 2 - %c: %f \n", estado2, SuperPoder2);
