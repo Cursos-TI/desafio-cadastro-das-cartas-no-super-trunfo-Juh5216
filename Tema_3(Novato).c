@@ -144,7 +144,7 @@ int main() {
 
     /* 3º - Comparação de APENAS 1 atributo númerico. 
             * Essa escolha deve ser feita diretamente pelo código, não pela entrada do usuário.
-            * Para determinar a carta vencedora, se aplica o mesmo conceito do primeiro nível do desafio, o maio valor vence .
+            * Para determinar a carta vencedora, se aplica o mesmo conceito do primeiro nível do desafio, o maior valor vence .
         - Exibir o resultado de comparação. 
             * Qual carta venceu a comparação, incluindo:
             * O atributo utilizado na comparação.
