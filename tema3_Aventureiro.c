@@ -30,8 +30,9 @@ int main() {
     
 
     //Carta 1
-    char estado1[3];                      // Uma letra.
-    char codigo1[5];                       // A letra do estado seguida de um número 01 á 04.
+    char país1[10];
+    char estado1;                          // Uma letra.
+    char codigo1[3];                       // A letra do estado seguida de um número 01 á 04.
     char nomeCidade1[15]; 
     int populacao1;
     float area1;                           // Área em quadrados
@@ -45,14 +46,17 @@ int main() {
     //Receber informações da carta 1
     printf("Informações da primeira carta! \n");
 
+    printf("Insira o país da primeira carta: ");
+    scanf(" %s", país1);
+
     printf("Insira a letra inicial do estado da primeira carta: ");
     scanf(" %c", &estado1);
 
     printf("Insira o código da primeira carta (Letra inicial do estado + 01): ");
-    scanf(" %s", &codigo1);
+    scanf(" %s", codigo1);
 
     printf("Insira o nome da cidade, correspondente ao estado da primeira carta: ");
-    scanf(" %s", &nomeCidade1);
+    scanf(" %s", nomeCidade1);
 
     printf("Insira a população da cidade: ");
     scanf(" %d", &populacao1);
@@ -78,8 +82,9 @@ int main() {
 
     
     //Carta 2
-    char estado2[15];                    // Uma letra.
-    char codigo2[5];                     // A letra do estado seguida de um número 01 á 04.
+    char país2[10]; 
+    char estado2;                     // Uma letra
+    char codigo2[3];                     // A letra do estado seguida de um número 01 á 04.
     char nomeCidade2[15]; 
     int populacao2;
     float area2;                         // Área em kilometros quadrados
@@ -93,14 +98,17 @@ int main() {
     //Receber informações da carta 2
     printf("Informações da segunda carta! \n");
 
+    printf("Insira o país da segunda carta:  ");
+    scanf(" %s", país1);
+
     printf("Insira a letra inicial do estado da segunda carta: ");
     scanf(" %c", &estado2);
 
     printf("Insira o código da segunda carta (Letra inicial do estado + 02): ");
-    scanf(" %s", &codigo2);
+    scanf(" %s", codigo2);
 
     printf("Insira o nome da cidade, correspondente ao estado da segunda carta: ");
-    scanf(" %s", &nomeCidade2);
+    scanf(" %s", nomeCidade2);
 
     printf("Insira a população da cidade: ");
     scanf(" %d", &populacao2);
@@ -130,9 +138,10 @@ int main() {
     //Exibição dos dados da carta 1
     printf("Carta 1 \n");
 
+    printf("País: %s \n", país1);
     printf("Estado: %c \n", estado1);
     printf("Código: %s \n", codigo1);
-    printf("Cidade: %c \n", nomeCidade1);
+    printf("Cidade: %s \n", nomeCidade1);
     printf("População: %d \n", populacao1);
     printf("Área: %f Km² \n ", area1);
     printf("PIB: %f reais \n ", PIB1);
@@ -146,9 +155,10 @@ int main() {
     //Exibição dos dados da carta 2
     printf("Carta 2 \n");
 
+    printf("País: %s \n", país2);
     printf("Estado: %c \n", estado2);
     printf("Código: %s \n", codigo2);
-    printf("Cidade: %c \n", nomeCidade2);
+    printf("Cidade: %s \n", nomeCidade2);
     printf("População: %d \n", populacao2);
     printf("Área: %f Km² \n ", area2);
     printf("PIB: %f reais \n ", PIB2);
@@ -161,7 +171,7 @@ int main() {
     //Escolha de atributo (carta 1) para a batalha das cartas.
     int escolhaAtributo;
 
-    printf("Jogadores 1 e 2, escolham 1 atributo para batalhar!");
+    printf("Jogadores 1 e 2, escolham 1 atributo para batalhar! \n");
     printf("1 - População \n");
     printf("2 - Área \n");
     printf("3 - PIB \n");
@@ -185,7 +195,7 @@ int main() {
         printf("Atributo escolhido para a batalha: Pontos turísticos! \n");
         break;
         case 5:
-        printf("JAtributo escolhido para a batalha: Densidade populacional! \n");
+        printf("Atributo escolhido para a batalha: Densidade populacional! \n");
         break;
         default:
         printf("Opção inválida! Escolham um número de 1 à 7 corresponde ao atributo que desejam para batalha! \n");
@@ -207,7 +217,7 @@ int main() {
         if (populacao1>populacao2){
             printf("A carta 1 venceu! \n");
 
-        } else if (populacao2>populacao1 {
+        } else if (populacao2>populacao1) {
               printf("A carta 2 venceu! \n");
 
         } else {
@@ -235,7 +245,7 @@ int main() {
         if  (PIB1>PIB2) {
             printf("Carta 1 venceu! \n");
 
-        } else if (PIB2>PIB1 { 
+        } else if (PIB2>PIB1) { 
                printf("Carta 2 venceu! \n");
 
         } else {
