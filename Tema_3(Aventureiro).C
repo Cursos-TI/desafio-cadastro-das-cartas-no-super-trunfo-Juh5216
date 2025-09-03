@@ -208,17 +208,38 @@ int main() {
             * Em caso de empate, exibir a mensagem "Empate!".
             * Tratar excessões = Empate (Estruturas aninhadas) */
 
-    if (e>SuperPoder2) {
-        printf("Carta vencedora da rodada \n");
-        printf("Carta 1 - %c: %f \n", estado1, SuperPoder1);
-        printf("Carta 2 - %c: %f \n", estado2, SuperPoder2);
-        printf("Resultado: Carta 1 %c venceu com o super poder %f!", estado1, SuperPoder1);
-    } else{
-        printf("Carta vencedora da rodada \n");
-        printf("Carta 1 - %c: %f \n", estado1, SuperPoder1);
-        printf("Carta 2 - %c: %f \n", estado2, SuperPoder2);
-        printf("Resultado: Carta 2 %c venceu com o super poder %f!", estado2, SuperPoder2);
+    //Comparação da população
+    if (escolhaAtributo==1) {
+        if (populacao1>populacao2){
+            printf("A carta 1 venceu!");
+
+        } else  {
+              printf("A carta 2 venceu!");
+        } 
     } 
+
+     // Comparação da área
+    if (escolhaAtributo==2){
+        if  (area1>area2) {
+            printf("Carta 1 venceu!");
+
+        } else { 
+               printf("Carta 2 venceu!");
+        }
+
+     // Comparação do PIB
+    if (escolhaAtributo==3){
+        if  (PIB1>PIB2) {
+            printf("Carta 1 venceu!");
+
+        } else { 
+               printf("Carta 2 venceu!");
+     }
+
+    
+     }
+
+
 
     
     return 0;
