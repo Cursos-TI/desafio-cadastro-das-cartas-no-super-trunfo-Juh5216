@@ -30,7 +30,7 @@ int main() {
     
 
     //Carta 1
-    char país1[10];
+    char pais1[10];
     char estado1;                          // Uma letra.
     char codigo1[3];                       // A letra do estado seguida de um número 01 á 04.
     char nomeCidade1[15]; 
@@ -47,7 +47,7 @@ int main() {
     printf("Informações da primeira carta! \n");
 
     printf("Insira o país da primeira carta: ");
-    scanf(" %s", país1);
+    scanf(" %s", pais1);
 
     printf("Insira a letra inicial do estado da primeira carta: ");
     scanf(" %c", &estado1);
@@ -82,8 +82,8 @@ int main() {
 
     
     //Carta 2
-    char país2[10]; 
-    char estado2;                     // Uma letra
+    char pais2[10]; 
+    char estado2;                        // Uma letra
     char codigo2[3];                     // A letra do estado seguida de um número 01 á 04.
     char nomeCidade2[15]; 
     int populacao2;
@@ -99,13 +99,13 @@ int main() {
     printf("Informações da segunda carta! \n");
 
     printf("Insira o país da segunda carta:  ");
-    scanf(" %s", país1);
+    scanf(" %s", pais2);
 
     printf("Insira a letra inicial do estado da segunda carta: ");
     scanf(" %c", &estado2);
 
     printf("Insira o código da segunda carta (Letra inicial do estado + 02): ");
-    scanf(" %s", codigo2);
+    scanf(" %s", &codigo2);
 
     printf("Insira o nome da cidade, correspondente ao estado da segunda carta: ");
     scanf(" %s", nomeCidade2);
@@ -138,34 +138,34 @@ int main() {
     //Exibição dos dados da carta 1
     printf("Carta 1 \n");
 
-    printf("País: %s \n", país1);
+    printf("País: %s \n", pais1);
     printf("Estado: %c \n", estado1);
     printf("Código: %s \n", codigo1);
     printf("Cidade: %s \n", nomeCidade1);
     printf("População: %d \n", populacao1);
-    printf("Área: %f Km² \n ", area1);
-    printf("PIB: %f reais \n ", PIB1);
+    printf("Área: %.2f Km² \n ", area1);
+    printf("PIB: %.2f reais \n ", PIB1);
     printf("Números de pontos turísticos: %d \n", pontosTuristicos1);
-    printf("Densidade populacional: %f hab/Km² \n ", densidadePopulacional1);
-    printf("PIB per capita: %f reais \n ", PIBPerCapita1);
-    printf("Super poder: %f \n", SuperPoder1);
+    printf("Densidade populacional: %.2f hab/Km² \n ", densidadePopulacional1);
+    printf("PIB per capita: %.2f reais \n ", PIBPerCapita1);
+    printf("Super poder: %.2f \n", SuperPoder1);
     
 
 
     //Exibição dos dados da carta 2
     printf("Carta 2 \n");
 
-    printf("País: %s \n", país2);
+    printf("País: %s \n", pais2);
     printf("Estado: %c \n", estado2);
     printf("Código: %s \n", codigo2);
     printf("Cidade: %s \n", nomeCidade2);
     printf("População: %d \n", populacao2);
-    printf("Área: %f Km² \n ", area2);
-    printf("PIB: %f reais \n ", PIB2);
+    printf("Área: %.2f Km² \n ", area2);
+    printf("PIB: %.2f reais \n ", PIB2);
     printf("Números de pontos turísticos: %d \n", pontosTuristicos2);
     printf("Densidade populacional: %f hab/Km²\n", densidadePopulacional2);
-    printf("PIB per capita: %f reais \n", PIBPerCapita2);
-    printf("Super poder: %f \n", SuperPoder2);
+    printf("PIB per capita: %.2f reais \n", PIBPerCapita2);
+    printf("Super poder: %.2f \n", SuperPoder2);
 
 
     //Escolha de atributo (carta 1) para a batalha das cartas.
@@ -177,8 +177,6 @@ int main() {
     printf("3 - PIB \n");
     printf("4 - Pontos turísticos \n");
     printf("5 - Densidade populacional \n");
-    printf("6 - PIB per capita \n");
-    printf("7 - Super poder \n");
     scanf("%d", &escolhaAtributo);
 
     switch(escolhaAtributo){
@@ -198,7 +196,7 @@ int main() {
         printf("Atributo escolhido para a batalha: Densidade populacional! \n");
         break;
         default:
-        printf("Opção inválida! Escolham um número de 1 à 7 corresponde ao atributo que desejam para batalha! \n");
+        printf("Opção inválida! Escolham um número de 1 à 5 corresponde ao atributo que desejam para batalha! \n");
         break;
     }
 
