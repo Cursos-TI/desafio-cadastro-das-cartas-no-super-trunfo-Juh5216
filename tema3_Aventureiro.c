@@ -105,7 +105,7 @@ int main() {
     scanf(" %c", &estado2);
 
     printf("Insira o código da segunda carta (Letra inicial do estado + 02): ");
-    scanf(" %s", &codigo2);
+    scanf(" %s", codigo2);
 
     printf("Insira o nome da cidade, correspondente ao estado da segunda carta: ");
     scanf(" %s", nomeCidade2);
