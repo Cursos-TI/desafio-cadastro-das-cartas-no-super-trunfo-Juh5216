@@ -1,0 +1,10 @@
+{
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ],
+    "files.associations": {
+        "Tema_3(Aventureiro).C": "cpp",
+        "Tema 3 (Aventureiro).C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
