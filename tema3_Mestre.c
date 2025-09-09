@@ -16,3 +16,9 @@ A soma dos atributos para cada carta.
  
 Qual carta venceu (ou se houve empate).
  */
+
+  
+
+
+    
+    
